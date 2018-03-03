@@ -1,0 +1,23 @@
+.outter-wrapper{
+  display: flex;
+  width:100%;
+  // overflow: hidden;
+}
+
+.wrapper{
+  padding:0 2rem;
+  max-width:1440px;
+  width:1440px;
+}
+
+
+@mixin gen_layout--md(){
+  .outter-wrapper{
+    width: calc(100% - 8rem);
+    margin:0 auto;
+  }
+
+  .wrapper{
+    padding:0 4rem;
+  }
+}

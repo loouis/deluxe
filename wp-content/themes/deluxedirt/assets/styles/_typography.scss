@@ -1,0 +1,220 @@
+// Fonts
+@font-face {
+  font-family: 'CircularSpotifyText';
+  src: url('assets/fonts/CircularSpotifyText-Book.eot');
+  src: url('assets/fonts/CircularSpotifyText-Book.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/CircularSpotifyText-Book.woff2') format('woff2'),
+    url('assets/fonts/CircularSpotifyText-Book.woff') format('woff'),
+    url('assets/fonts/CircularSpotifyText-Book.ttf') format('truetype'),
+    url('assets/fonts/CircularSpotifyText-Book.svg#CircularSpotifyText-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CircularSpotifyText';
+  src: url('assets/fonts/CircularSpotifyText-Black.eot');
+  src: url('assets/fonts/CircularSpotifyText-Black.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/CircularSpotifyText-Black.woff2') format('woff2'),
+    url('assets/fonts/CircularSpotifyText-Black.woff') format('woff'),
+    url('assets/fonts/CircularSpotifyText-Black.ttf') format('truetype'),
+    url('assets/fonts/CircularSpotifyText-Black.svg#CircularSpotifyText-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+body{
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-weight: normal;
+}
+
+html{
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: $brandFont;
+  font-weight: 900;
+}
+
+h1{
+  font-size:2.25rem;
+  line-height: 2rem;
+
+  &.small{
+
+  }
+  &.medium{
+
+  }
+  &.large{
+    
+  }
+}
+
+h2{
+  font-size:1.75rem;
+  line-height: 1.5rem;
+
+  &.small{
+
+  }
+  &.medium{
+
+  }
+  &.large{
+    
+  }
+}
+
+h3{
+  font-size:1.75rem;
+  line-height: 2.75rem;
+
+  &.small{
+
+  }
+  &.medium{
+
+  }
+  &.large{
+    font-size:2.2rem;
+    line-height: 2rem;
+  }
+}
+
+h4{
+  font-size:1.1rem;
+  line-height: 2.1rem;
+
+  &.small-title{
+    font-size:.85rem;
+    line-height: .75rem;
+  }
+
+  &.small{
+
+  }
+  &.medium{
+
+  }
+  &.large{
+    
+  }
+}
+
+p, li, a{
+  font-family: $brandFont;
+  color:$f-dark;
+  font-size:.85rem;
+  line-height: 1.25rem;
+}
+
+p{
+  margin-bottom:.75rem;
+}
+
+.btn p{
+  font-size:.75rem;
+}
+
+
+@mixin fontSizes--md(){
+  h1{
+    font-size:4rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+      
+    }
+  }
+  h2{
+    font-size:3.75rem;
+    line-height: 4rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+
+    }
+  }
+}
+
+@mixin fontSizes--lg(){
+  html{
+    font-size: 20px;
+  }
+  h1{
+    font-size:4rem;
+    line-height: 3.25rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+      
+    }
+  }
+  h2{
+    font-size:3.75rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+
+    }
+  }
+  p{
+    font-size:.75rem;
+  }
+}
+
+@mixin fontSizes--lgest(){
+  html{
+    font-size: 22px;
+  }
+  h1{
+    // font-size:5rem;
+    // line-height: 4rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+      
+    }
+  }
+  h2{
+    font-size:3.75rem;
+
+    &.small{
+
+    }
+    &.medium{
+
+    }
+    &.large{
+
+    }
+  }
+}

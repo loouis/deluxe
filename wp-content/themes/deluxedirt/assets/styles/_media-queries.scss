@@ -1,0 +1,26 @@
+
+// Medium (md) - Tablet above 
+@media (min-width: 786px) and (min-height: 600px) { 
+  @include fontSizes--md();
+  @include navigations--md();  
+  @include hero--md();
+  @include about-section--md();
+  @include gen_layout--md();
+  @include services--md();
+}
+
+
+
+// Large (lg) - Large screens 
+@media (min-width: 1000px) and (min-height: 600px) { 
+  @include hero--lg();
+  @include fontSizes--lg();
+}
+
+
+
+// Largest (lgest) - Largest screens 
+@media (min-width: 1200px) and (min-height: 600px) { 
+  @include fontSizes--lgest();
+}
+
