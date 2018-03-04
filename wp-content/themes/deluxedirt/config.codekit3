@@ -123,6 +123,17 @@
 		"oAP": "\/build\/assets\/fonts\/CircularSpotifyText-Book.woff2",
 		"oF": 0
 		},
+	"\/assets\/images\/seal-of-approval.png": {
+		"ft": 32768,
+		"iS": 111119,
+		"oA": 0,
+		"oAP": "\/build\/assets\/images\/seal-of-approval.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/js\/lib\/_bx-slider.js": {
 		"ft": 64,
 		"ma": 0,
@@ -375,6 +386,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/styles\/modules\/_image-text-block.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/styles\/modules\/_image-text-block.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/styles\/modules\/_navigations.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -397,6 +421,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/build\/assets\/styles\/modules\/_our-projects.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/styles\/modules\/_project-single.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/styles\/modules\/_project-single.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

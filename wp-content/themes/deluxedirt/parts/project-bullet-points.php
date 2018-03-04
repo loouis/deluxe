@@ -10,10 +10,10 @@
       $noUnit = get_sub_field('pbp_no-unit');
     ?>
     <li>
-      <h3 class="project-single-info__bull-points__title"><?php echo $title;?></h3>
-      <div class="">
-        <h2 class="project-single-info__bull-points__no"><?php echo $no;?></h2>
-        <p class="project-single-info__bull-points__unit"><?php echo $noUnit;?></p>
+      <h3 class="project-single-info__bull-points__title small"><?php echo $title;?></h3>
+      <div class="container">
+        <h2 class="project-single-info__bull-points__no text-shadow large"><?php echo $no;?></h2>
+        <p class="project-single-info__bull-points__unit text-shadow--small"><?php echo $noUnit;?></p>
       </div>
     </li>
   <?php endwhile; ?>

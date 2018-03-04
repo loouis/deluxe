@@ -1,0 +1,124 @@
+.image-text-block{        
+  padding: 6rem 3rem;
+  position: relative;
+  overflow: hidden;
+  background: darken($f-dark, 10%);
+
+  &:after{
+    content:"";
+    position: absolute;
+    height:88%;
+    width:94%;
+    top:6%;
+    left:3%;
+    background:rgba($brandGreen,.9);
+    z-index: 2;
+    opacity: 0;
+
+    transition: opacity .4s ease-in-out;
+  }
+
+  .image{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    transform: scale(1);
+    background-size: cover;
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+  }
+
+  header{
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    z-index: 3;
+    color:white;
+
+    button{
+      position: absolute;
+      width:40px;
+      height:40px;
+      background:white;
+      border-radius:50%;
+      margin-top:.5rem;
+      opacity:0;
+      transform: rotate(-90deg);
+      transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+
+      i{
+        position: relative;
+        width:6px;
+        height:6px;
+        border-radius:50%;
+        border:2px solid $f-dark;
+        margin: 2px auto 0 auto;
+        
+
+        &:before, &:after{
+          content:"";
+          position: absolute;
+          width:6px;
+          height:6px;
+          top:-2px;
+          border-radius:50%;
+          border:2px solid $f-dark;
+        }
+        &:before{
+          left:-10px;
+        }
+
+        &:after{
+          right:-10px;
+        }
+      }
+    }
+
+
+    .small-title{
+      display:flex;
+
+      &:after{
+        content:"";
+        position: relative;
+        align-self:center;
+        right:-.5rem;
+        width:1rem;
+        height:1px;
+        background:white;
+      }
+    }
+  }
+
+  &.large{
+    height:100%;
+    
+    &:after{
+      height:94%;
+      top:3%;
+    }
+
+    header{
+      top:50%;
+      transform:translateY(-50%);
+    }
+  }
+
+  &:hover{
+    &:after{
+      opacity: .6;
+    }
+
+    header button{
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    .image{
+      transform: scale(1.15);
+      opacity:.5;
+
+      transition: transform 4s ease-in-out;
+    }
+  }
+}

@@ -72,3 +72,57 @@
   
 }
 
+
+.btn-circle{
+  width:56px;
+  height:56px;
+  background:white;
+  border-radius:50%;
+  box-shadow:0 6px 10px rgba(0,0,0,0.2);
+}
+
+i.arrow{
+  position: relative;
+  margin: 0 auto;
+  width:.5rem;
+  height:2rem;
+  top:50%;
+  transform: translateY(-50%);
+  
+  &:after,&:before{
+    content:"";
+    position: absolute;
+    width:.65rem;
+    height:2px;
+    background:black;
+    top:48%;
+  }
+
+  // ------------ Previous Arrow
+  &--prev{
+    &:before{
+      transform-origin: left bottom;
+      transform: rotate(-45deg);
+    }
+    &:after{
+      transform-origin: left top;
+      transform: rotate(45deg);
+    }
+  }
+
+  // ------------ Next Arrow
+  &--next{
+
+    &:before{
+      transform-origin: right top;
+      transform: rotate(-45deg);
+      right:0rem;
+    }
+    &:after{
+      transform-origin: right bottom;
+      transform: rotate(45deg);
+      right:0rem;
+    }
+  }
+}
+

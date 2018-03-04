@@ -2,13 +2,33 @@
 
   <main role="">
 
-    <section class="hero outter-wrapper">
-      <div class="hero__text">
-        <h1>Deluxe Dirt <br />Innovations.</h1>
-        <span class="hero__text__rotating">
-          <h1>Dirt Jump</h1>
-        </span>
-        <h1>Speacialists.</h1>
+    <?php
+      $heroIMG = the_field('');
+    ?>
+    <?php
+      $attachment_id = get_post_thumbnail_id();
+      $d_heroImage = wp_get_attachment_image_src($attachment_id, 'd_full-screen');
+      $m_heroImage = wp_get_attachment_image_src($attachment_id, 'm_split-screen-image');
+    ?>
+
+    <?php if( wp_is_mobile() ){ ?>
+      <section class="hero" style="background-image: url('<?php echo $m_heroImage[0]; ?>')">
+    <?php }else { ?>
+      <section class="hero" style="background-image: url('<?php echo $d_heroImage[0];?>')">
+    <?php } ?>
+      <div class="wrapper">
+        <div class="hero__text">
+          <h2 class="we-are text-shadow--small">WE ARE</h2>
+          <h1 class="text-shadow">Deluxe Dirt <br />Innovations.</h1>
+          <span class="hero__text__rotating">
+            <span>
+              <h1>Dirt Pump</h1>
+              <h1>Race tracks</h1>
+              <h1>Dirt Jumping</h1>
+            </span>
+          </span>
+          <h1 class="text-shadow">Speacialists.</h1>
+        </div>
       </div>
     </section><!-- //hero -->
 
@@ -18,7 +38,7 @@
           <div class="split split-l">
             <header>
               <h4 class="small-title"><?php the_field('about_small-title');?></h4>
-              <h2><?php echo str_replace('|', '<br />', get_field('about_title'));?></h2>
+              <h2 class="text-shadow"><?php echo str_replace('|', '<br />', get_field('about_title'));?></h2>
             </header>
             <p><?php the_field('about_text');?></p>
           </div><!-- // Split-l -->
@@ -53,7 +73,7 @@
         <div class="wrapper">
           <header>
             <h4 class="small-title">Love for Dirt</h4>
-            <h2>Services.</h2>
+            <h2 class="text-shadow">Services.</h2>
             <?php get_template_part('parts/services', 'nav');?>
           </header>
           <div class="services__carousel-con">
@@ -80,7 +100,7 @@
         <div class="wrapper">
         <header>
           <h4 class="small-title">Our</h4>
-          <h2>Projects.</h2>
+          <h2 class="text-shadow">Projects.</h2>
         </header>
         <div class="our-projects__projects">
           <?php get_template_part('parts/recent-projects');?>
