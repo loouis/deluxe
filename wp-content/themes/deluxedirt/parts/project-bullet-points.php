@@ -9,7 +9,7 @@
       $no = get_sub_field('pbp_no');
       $noUnit = get_sub_field('pbp_no-unit');
     ?>
-    <li>
+    <li class="wow fadeInUp" data-wow-delay="0.<?php echo $counter + '1';?>s">
       <h3 class="project-single-info__bull-points__title small"><?php echo $title;?></h3>
       <div class="container">
         <h2 class="project-single-info__bull-points__no text-shadow large"><?php echo $no;?></h2>

@@ -1,5 +1,5 @@
 .image-text-block{        
-  padding: 6rem 3rem;
+  padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
   background: darken($f-dark, 10%);
@@ -36,48 +36,10 @@
     z-index: 3;
     color:white;
 
-    button{
-      position: absolute;
-      width:40px;
-      height:40px;
-      background:white;
-      border-radius:50%;
-      margin-top:.5rem;
-      opacity:0;
-      transform: rotate(-90deg);
-      transition: transform .25s ease-in-out, opacity .25s ease-in-out;
-
-      i{
-        position: relative;
-        width:6px;
-        height:6px;
-        border-radius:50%;
-        border:2px solid $f-dark;
-        margin: 2px auto 0 auto;
-        
-
-        &:before, &:after{
-          content:"";
-          position: absolute;
-          width:6px;
-          height:6px;
-          top:-2px;
-          border-radius:50%;
-          border:2px solid $f-dark;
-        }
-        &:before{
-          left:-10px;
-        }
-
-        &:after{
-          right:-10px;
-        }
-      }
-    }
-
 
     .small-title{
       display:flex;
+      margin-bottom:.5rem;
 
       &:after{
         content:"";
@@ -91,19 +53,7 @@
     }
   }
 
-  &.large{
-    height:100%;
-    
-    &:after{
-      height:94%;
-      top:3%;
-    }
-
-    header{
-      top:50%;
-      transform:translateY(-50%);
-    }
-  }
+  
 
   &:hover{
     &:after{
@@ -119,6 +69,66 @@
       opacity:.5;
 
       transition: transform 4s ease-in-out;
+    }
+  }
+}
+
+
+@mixin image-text-block--md(){
+  .image-text-block{
+    padding: 6rem 3rem;
+    
+    &.large{
+      height:100%;
+      
+      &:after{
+        height:94%;
+        top:3%;
+      }
+  
+      header{
+        top:50%;
+        transform:translateY(-50%);
+
+        button{
+          position: absolute;
+          width:40px;
+          height:40px;
+          background:white;
+          border-radius:50%;
+          margin-top:.5rem;
+          opacity:0;
+          transform: rotate(-90deg);
+          transition: transform .25s ease-in-out, opacity .25s ease-in-out;
+    
+          i{
+            position: relative;
+            width:6px;
+            height:6px;
+            border-radius:50%;
+            border:2px solid $f-dark;
+            margin: 2px auto 0 auto;
+            
+    
+            &:before, &:after{
+              content:"";
+              position: absolute;
+              width:6px;
+              height:6px;
+              top:-2px;
+              border-radius:50%;
+              border:2px solid $f-dark;
+            }
+            &:before{
+              left:-10px;
+            }
+    
+            &:after{
+              right:-10px;
+            }
+          }
+        }
+      }
     }
   }
 }

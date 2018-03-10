@@ -10,7 +10,7 @@
 <?php 
   while( $the_query->have_posts() ): $the_query->the_post(); $counter++; 
   $attachment_id = get_post_thumbnail_id();
-  $d_split_image = wp_get_attachment_image_src($attachment_id, 'd_full-screen-split');
+  $d_split_image = wp_get_attachment_image_src($attachment_id, 'd_split-screen');
   $m_image = wp_get_attachment_image_src($attachment_id, 'd_hero-image');
   $d_image = wp_get_attachment_image_src($attachment_id, 'd_hero-image');
   $category = get_the_category();
@@ -18,10 +18,10 @@
   <?php if($counter == 1){ ?>
     <div class="wrap">
       <div class="split">
-        <a href="<?php echo get_permalink();?>" class="image-text-block large our-projects__project our-projects__project--<?php echo $counter;?>">
+        <a href="<?php echo get_permalink();?>" class="image-text-block large our-projects__project our-projects__project--<?php echo $counter;?> wow fadeIn" data-wow-delay="0.<?php echo $counter + '1'; ?>s">
           <header>
             <h4 class="small-title small-title--w-line"><?php echo $category[0]->cat_name;?></h4>
-            <h3 class="large text-shadow"><?php the_title();?></h3>
+            <h3 class="large text-shadow"><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
             <button class="circle-more-btn"><i></i></button>
           </header>
           <?php if( wp_is_mobile() ){ ?>
@@ -33,10 +33,10 @@
       </div>
   <?php }else{ ?>
     <?php if($counter % 2 == 0){echo '<div class="split">';}?>
-      <a href="<?php echo get_permalink();?>" class="image-text-block our-projects__project our-projects__project--<?php echo $counter;?>">
+      <a href="<?php echo get_permalink();?>" class="image-text-block our-projects__project our-projects__project--<?php echo $counter;?> wow fadeIn" data-wow-delay="0.<?php echo $counter + '1'; ?>s">
         <header>
-          <h4 class="small-title small-title--w-line"><?php single_cat_title(); ?></h4>
-          <h3 class="large text-shadow"><?php the_title();?></h3>
+          <h4 class="small-title small-title--w-line"><?php echo $category[0]->cat_name;?></h4>
+          <h3 class="text-shadow"><?php echo str_replace(' | ', '<br />', get_the_title()); ?></h3>
           <button class="circle-more-btn"><i></i></button>
         </header>
         <?php if( wp_is_mobile() ){ ?>

@@ -54,8 +54,12 @@ h1{
 }
 
 h2{
-  font-size:1.75rem;
-  line-height: 1.5rem;
+  font-size:1.95rem;
+  line-height: 2.15rem;
+
+  &.uppercase{
+    line-height: 1.85rem;
+  }
 
   &.small{
 
@@ -64,16 +68,17 @@ h2{
 
   }
   &.large{
-    
+    font-size:2.5rem;
   }
 }
 
 h3{
-  font-size:1.75rem;
-  line-height: 2.75rem;
+  font-size:2rem;
+  line-height: 1.85rem;
 
   &.small{
     font-size:1.25rem;
+    line-height: 1.5rem;
   }
   &.medium{
 
@@ -107,22 +112,47 @@ h4{
 p, li, a{
   font-family: $brandFont;
   color:$f-dark;
-  font-size:.85rem;
-  line-height: 1.25rem;
+  font-size:.95rem;
+  line-height: 1.5rem;
 }
 
 p{
   margin-bottom:.75rem;
+
+  &.large{
+    font-size:1rem;
+    line-height:1.35rem;
+  }
 }
 
 .btn p{
   font-size:.75rem;
 }
 
+@mixin fontSizes--sm-md(){
+  h1{
+    font-size:2.75rem;
+    line-height: 2.35rem;
+  }
+  h2{
+    font-size:2.5rem;
+    line-height: 2.25rem;
+
+    &.uppercase{
+      line-height: 2.15rem;
+    }
+  }
+  h3{
+    font-size:2.25rem;
+    line-height: 2rem;
+  }
+}
+
 
 @mixin fontSizes--md(){
   h1{
     font-size:4rem;
+    line-height: 3.25rem;
 
     &.small{
 
@@ -138,6 +168,10 @@ p{
     font-size:3.75rem;
     line-height: 4rem;
 
+    &.uppercase{
+      line-height: 3rem;
+    }
+
     &.small{
 
     }
@@ -147,6 +181,20 @@ p{
     &.large{
       font-size:4.25rem;
     }
+  }
+
+  h3{
+    font-size:2.2rem;
+      line-height: 2rem;
+
+    &.large{
+      font-size:2.8rem;
+      line-height: 2.35rem;
+    }
+  }
+
+  p, li, a{
+    line-height: 1.25rem;
   }
 }
 
@@ -181,6 +229,7 @@ p{
 
     }
   }
+  
   p{
     font-size:.75rem;
   }
@@ -215,6 +264,15 @@ p{
     }
     &.large{
 
+    }
+  }
+  h3{
+    font-size:2.4rem;
+    line-height: 2.15rem;
+
+    &.large{
+      font-size:3rem;
+      line-height: 2.35rem;
     }
   }
 }

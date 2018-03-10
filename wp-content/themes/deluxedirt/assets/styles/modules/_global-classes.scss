@@ -6,7 +6,7 @@
   text-shadow: 0 10px 20px rgba(0,0,0,0.25);
 
   &--small{
-    text-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    text-shadow: 0 6px 10px rgba(0,0,0,0.3);
   }
 
   &--large{
@@ -14,10 +14,51 @@
   }
 }
 
-.bg-fixed{
-  background-attachment: fixed;
+.box-shadow{
+  box-shadow:0 10px 20px rgba(0,0,0,0.25);
+}
+
+.anchor-page-pos { 
+  position: relative;
+
+  &:before{
+    display: inline-block; 
+    content: ""; 
+    position: relative;
+    margin-top: -210px; 
+    height: 210px; 
+    width:100%;
+    visibility: hidden; 
+    pointer-events: none;
+  }
+}
+
+header.header-title{
+  text-align: center;
+  color:white;
+  margin-bottom:3rem;
+
+  .small-title{
+    margin-bottom:.75rem;
+  }
+
+  h2{
+    text-transform: uppercase;
+  }
+}
+
+.uppercase{
+  text-transform: uppercase;
 }
 
 .cover{
   background-size:cover !important;
+}
+
+
+
+@mixin global-classes--md(){
+  .bg-fixed{
+    background-attachment: fixed;
+  }
 }

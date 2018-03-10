@@ -1,12 +1,25 @@
 
+
+// Small-Medium (sm-md)
+@media (min-width: 600px){ 
+  @include about-section--sm-md();
+  @include fontSizes--sm-md();
+}
+
 // Medium (md) - Tablet above 
-@media (min-width: 786px) and (min-height: 600px) { 
+@media (min-width: 786px){ 
   @include fontSizes--md();
   @include navigations--md();  
   @include hero--md();
-  @include about-section--md();
+  // @include about-section--md();
   @include gen_layout--md();
   @include services--md();
+  @include our-projects--md();
+  @include image-text-block--md();
+  @include buttons--md();
+  @include footer--md();
+  @include project-single-md();
+  @include global-classes--md();
 }
 
 
@@ -15,6 +28,7 @@
 @media (min-width: 1000px) and (min-height: 600px) { 
   @include hero--lg();
   @include fontSizes--lg();
+  @include gen_layout--lg();
 }
 
 
@@ -22,5 +36,6 @@
 // Largest (lgest) - Largest screens 
 @media (min-width: 1200px) and (min-height: 600px) { 
   @include fontSizes--lgest();
+  
 }
 

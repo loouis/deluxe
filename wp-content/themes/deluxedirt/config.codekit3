@@ -123,6 +123,16 @@
 		"oAP": "\/build\/assets\/fonts\/CircularSpotifyText-Book.woff2",
 		"oF": 0
 		},
+	"\/assets\/images\/d_parkwood-01-300x169.jpg": {
+		"ft": 16384,
+		"iS": 14627,
+		"oA": 0,
+		"oAP": "\/build\/assets\/images\/d_parkwood-01-300x169.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"\/assets\/images\/seal-of-approval.png": {
 		"ft": 32768,
 		"iS": 111119,
@@ -134,12 +144,22 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/js\/lib\/_bx-slider.js": {
+	"\/assets\/js\/lib\/_flickity.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/build\/assets\/js\/lib\/_bx-slider-min.js",
+		"oAP": "\/build\/assets\/js\/lib\/_flickity-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/lib\/_wow.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/assets\/js\/lib\/_wow-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -308,7 +328,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/styles\/libs\/_bxslider.scss": {
+	"\/assets\/styles\/libs\/_flickity.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -316,7 +336,20 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/build\/assets\/styles\/libs\/_bxslider.css",
+		"oAP": "\/build\/assets\/styles\/libs\/_flickity.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/styles\/libs\/_wow.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/build\/assets\/styles\/libs\/_wow.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -915,8 +948,14 @@
 	"\/assets\/js\/scripts.js": [
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/assets\/js\/lib\/_bx-slider.js",
+			"linkedFileAbbreviatedPath": "\/assets\/js\/lib\/_flickity.js",
 			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/assets\/js\/lib\/_wow.js",
+			"position": 1,
 			"type": 0
 			}
 		]

@@ -1,14 +1,60 @@
 .about{
   position: relative;
-  padding:4rem 0;
+  padding:4rem 0 10rem 0;
+
+  .split{
+    position: relative;
+    width:50%;
+    z-index: 2;
+
+    &-l{
+      width:100%;
+
+      .text{
+        margin-top:2rem;
+      }
+    }
+
+    &-r{
+      margin-top:1.25rem;
+      width:100%;
+      z-index: 1;
+
+      .images{
+        position: relative;
+        @include clearfix;
+        width:70%;
+
+        &__image{
+          position: relative;
+
+          &--bottom{
+            width:110%;
+            overflow: hidden;
+          }
+          &--top{
+            position: absolute;
+            left:auto;
+            left:3rem;
+            bottom:-4rem;
+            z-index: 3;
+            width:110%;
+            
+            img{
+              border:.35rem solid white;
+            }
+          } 
+        }
+      }
+    }
+  }
 
   .wrapper{
     display:flex;
+    flex-wrap:wrap;
   }
   h2{
-    text-transform: uppercase;
     color:white;  
-    line-height: 3.2rem;
   }
   .small-title{
     display:flex;
@@ -27,9 +73,6 @@
       background:currentColor;
       opacity: 0.5;
     }
-  }
-  .image{
-
   }
 
   &__bg-img{
@@ -55,56 +98,36 @@
       height:100%;
       opacity:0.2;
       background-size:cover;
-      background-attachment: fixed;
+      
     }
   }
 }
 
 
-@mixin about-section--md(){
+@mixin about-section--sm-md(){
   .about{
     padding:8rem 0 16rem 0;
-    
-    .wrapper{
-      justify-content: space-between;
-    }
-    p{
-      width:50%;
-    }
-    .split{
-      position: relative;
-      width:50%;
 
+    .split{
+      width:50%;
+  
       &-l{
         width:70%;
-        z-index: 2;
       }
-
+  
       &-r{
-        margin-top:1.25rem;
         width:30%;
-        z-index: 1;
-
+  
         .images{
-          position: relative;
-          @include clearfix;
           width:120%;
           left:-8rem;
           top:0;
-
-
+  
           &__image{
-            position: relative;
-
-            &--bottom{
-              width:110%;
-            }
+  
             &--top{
-              position: absolute;
               left:auto;
               right:-8rem;
-              bottom:-4rem;
-              z-index: 3;
               width:110%;
               
               img{
@@ -115,5 +138,18 @@
         }
       }
     }
+
+
+    h2{
+      // line-height: 3.2rem;
+    }
+    
+    .wrapper{
+      justify-content: space-between;
+    }
+    p{
+      width:50%;
+    }
+    
   }
 }

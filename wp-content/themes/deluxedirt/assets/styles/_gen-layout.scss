@@ -7,6 +7,8 @@
 .wrapper{
   padding:0 2rem;
   max-width:1440px;
+  width:100%;
+  margin:0 auto;
 }
 
 
@@ -15,8 +17,18 @@
     width: calc(100% - 8rem);
     margin:0 auto;
   }
-
   .wrapper{
-    padding:0 4rem;
+    padding:0 0rem;
+  }
+
+  
+}
+
+@mixin gen_layout--lg(){
+  .outter-wrapper{
+    width: calc(100% - 8rem);
+  }
+  .wrapper{
+    padding:0 2rem;
   }
 }

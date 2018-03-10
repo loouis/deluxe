@@ -1,40 +1,29 @@
 .all-projects{
   padding-bottom:8rem;
+  margin-top:3rem;
 
   .wrapper{
+    padding:0;
     display:flex;
     flex-wrap:wrap;
   }
 
   a{
-    flex: 0 0 50%;
+    flex: 0 0 100%;
     display:flex;
     align-items: center;
-    height:15rem;
+    height:18rem;
   }
 }
 
 .our-projects{
   position: relative;
   z-index: 2;
-  margin-top:-12rem;
-  padding-bottom:5rem;
+  padding-bottom:4rem;
 
   .wrapper{
     padding:0;
-  }
-
-  header{
-    text-align: center;
-    color:white;
-
-    .small-title{
-      margin-bottom:.5rem;
-    }
-
-    h2{
-      text-transform: uppercase;
-    }
+    margin-top:-8rem;
   }
 
   &__projects{
@@ -42,13 +31,35 @@
 
     .wrap{
       display: flex;
+      flex-wrap:wrap;
       align-items: stretch;
       justify-content:center;
     }
 
     .split{
+      flex: 0 0 100%;
+    }
+  }
+}
+
+@mixin our-projects--md(){
+  .all-projects{
+
+    a{
       flex: 0 0 50%;
-      background:green;
+    }
+  }
+  .our-projects{
+    padding-bottom:5rem;
+
+    .wrapper{
+      margin-top:-12rem;
+    }
+
+    &__projects{
+      .split{
+        flex: 0 0 50%;
+      }
     }
   }
 }

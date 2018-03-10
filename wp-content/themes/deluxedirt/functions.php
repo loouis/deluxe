@@ -29,6 +29,8 @@ if (function_exists('add_theme_support'))
     add_theme_support('post-thumbnails');
 
     add_image_size('d_full-screen', 1800, 1016, true);
+    add_image_size('d_smaller-height-full-screen', 1800, 700, true);
+    add_image_size('d_smaller-full-screen', 1200, 677, true);
     add_image_size('d_full-screen-split', 1800, 508, true);
     add_image_size('d_full-screen-half', 900, 508, true);
     add_image_size('d_hero-image', 1800, 1300, true);

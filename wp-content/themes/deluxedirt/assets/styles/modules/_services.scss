@@ -2,35 +2,136 @@
   position: relative;
   background-color:$brandGreen;
   z-index: 1;
+  padding:3rem 0;
 
   .wrapper{
     padding-bottom:5rem;
-    
-    header{
-      position: relative;
-      color:white;
-      text-align: center;
-      margin-top:-8rem;
-
-      .small-title{
-        margin-bottom:.5rem;
-      }
-
-      h2{
-        text-transform: uppercase;
-        margin-bottom:1rem;
-      }
-    }
   }
+    
   &__carousel-con{
     margin:2rem 0 6rem 0;
-    overflow: hidden;
+    // overflow: hidden;
   }
   &-carousel{
+    &:after{
+      content: '';
+    }
     &__service{
+      position: relative;
+      width:100%;
+      background:lighten($brandGreen, 6%);
+      margin:1.25rem 0;
+      box-shadow: 0 6px 10px rgba(0,0,0,.2);
+      
+      &--visible-desc{
+        background:white;
+        width:110%;
+        left:-5%;
+        z-index: 2;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+
+        .services-carousel__service__mobile-accord{
+          header{
+            p{
+              color:black;
+            }
+            i{
+              svg path, svg circle{
+                fill:black;
+              }
+            }
+          }
+
+          .arrow{
+            transform: rotate(90deg);
+          }
+
+          .image:before{
+            opacity: 1;
+          }
+        }
+
+        .services-carousel__service__content{
+          display:block;
+
+          .services-carousel__service__open-para{
+          }
+        }
+      }
+
+      &__content{
+        display:none;
+        padding:1rem 1.75rem 2rem 1.75rem;
+      }
+
+      &__mobile-accord{
+        background:transparent;
+        position: relative;
+        padding:2.5rem 0;
+
+        header i{
+          svg path, svg circle{
+            fill:white;
+          }
+        }
+
+        .arrow{
+          position: absolute;
+          right: 1.5rem;
+          transform: rotate(-90deg);
+          top: 36%;
+          z-index: 2;
+        }
+
+        .image{
+          position: absolute;
+          top:0;
+          width:100%;
+          height:100%;
+          left:0;
+          opacity: 0.6;
+
+          &:before{
+            opacity: 0;
+            content:"";
+            position:absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height:60px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 94%);
+          }
+        }
+        
+        header{
+          display: flex;
+          position: relative;
+          color:white;
+          align-items:center;
+          z-index: 1;
+          padding-left:1rem;
+          
+          p{
+            color:white;
+            font-weight:bold;
+            max-width:200px;
+            line-height: 1rem;
+            font-size:1rem;
+            margin-bottom:0;
+            margin-left: .5rem;
+          }
+          i{
+            width:60px;
+          }
+        }
+
+        i{
+          
+        }
+      }
 
       &__open-para{
-        color:white;
         font-size:1rem;
       }
 
@@ -44,10 +145,9 @@
           flex: 1 0 100%;
 
           p{
-            width:80%;
-            border-top:1px solid rgba(255,255,255,.3);
+            border-top:1px solid rgba(0,0,0,.08);
             padding:.5rem 0;
-            color:white;
+            
             margin-bottom:0;
             font-weight: 900;
           }
@@ -58,7 +158,7 @@
   &__bg-img{
     position: absolute;
     width:100%;
-    height:460px;
+    height:660px;
     bottom:0;
     left:0;
     z-index: -1;
@@ -77,26 +177,65 @@
       position: relative;
       width:100%;
       height:100%;
-      opacity:0.2;
+      opacity:0.5;
       background-size:cover;
       background-repeat: no-repeat;
-      background-attachment: fixed;
+      // background-attachment: fixed;
     }
   }
 }
 
 @mixin services--md(){
   .services{
+
+    header.header-title{
+      margin-bottom:0;
+    }
+
+    &__bg-img{
+      height:460px;
+    }
+    
     .wrapper{
-      max-width:1000px;
+      max-width:900px;
       margin: 0 auto;
+      margin-top:-14rem !important;
     }
 
     &-carousel{
+      &:after {
+        content: 'flickity';
+        display: none; /* hide :after */
+      }
+      
       &__service{
+        background:none;
+        margin:0 0;
+        box-shadow: none;
+        
+        .services-carousel__service__content{
+          padding-top:0;
+        }
+
+        .services-carousel__service__open-para{
+          color:white;
+        }
+        &__mobile-accord{
+          display: none;
+        }
+        &__content{
+          display:block;
+        }
+
         ul{
           li{
             flex-basis:50%;
+
+            p{
+              width:80%;
+              color:white;
+              border-top:1px solid rgba(255,255,255,.3);
+            }
           }
         }
       }

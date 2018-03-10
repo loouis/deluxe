@@ -20,10 +20,10 @@
 
           <ul class="website-main-nav__contact-details__links">
             <li>
-              <a href="tel:<?php echo the_field('deluxe_tel-no', 'options');?>"><?php the_field('deluxe_tel-no', 'options');?></a>
+              <a class="btn-text-link-box" href="tel:<?php echo the_field('deluxe_tel-no', 'options');?>"><?php the_field('deluxe_tel-no', 'options');?></a>
             </li>
             <li>
-              <a href="mailto:<?php echo the_field('deluxe-email-address', 'options');?>"><?php the_field('deluxe-email-address', 'options');?></a>
+              <a class="btn-text-link-box" href="mailto:<?php echo the_field('deluxe-email-address', 'options');?>"><?php the_field('deluxe-email-address', 'options');?></a>
             </li>
           </ul>
 

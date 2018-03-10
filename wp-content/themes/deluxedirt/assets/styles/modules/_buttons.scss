@@ -1,5 +1,3 @@
-
-
 .btn{
   position: relative;
   padding:.75rem 1.75rem;
@@ -23,41 +21,7 @@
   &--icon{
   
     i{
-      position:absolute;
-      margin:5px 0 0 10px;
-      width:20px;
-      height:20px;
-      right:30px;
-      margin-top:6px;
-      opacity: 0;
-      transition: opacity .4s ease-in-out;
-
-      svg{
-        .cls-1{
-          &:nth-of-type(2){
-            opacity:0;
-            transform: translateX(-30px);
-            transition: all .25s ease-in-out;
-          }
-        }
-      }
-    }
-
-    &:hover{
-      padding-right:2.75rem;
-
-      i{
-        opacity:1;
-
-        svg{
-          .cls-1{
-            &:nth-of-type(2){
-              transform: translateX(0px);
-              opacity:1;
-            } 
-          }
-        }
-      }
+      display: none;
     }
   }
 
@@ -72,10 +36,55 @@
   
 }
 
+.btn-text-link-box{
+  display: block;
+  transform: translateY(0) scale(1);
+  padding:.5rem 1rem .5rem 1rem;
+  transform-origin: left center;
+  border-radius:0;
+  margin-left: -1rem;
+
+  transition: all .25s ease-in-out;
+
+  &:hover{
+    background:white;
+    color:black;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,.25);
+    border-radius:100px;
+  }
+  
+}
+
+.btn-icon-circle{
+  border-radius:50%;
+  box-shadow:0 10px 20px rgba(0,0,0,0.0);
+  transform:translateY(0);
+  width:44px;
+  height:44px;
+  padding:5px;
+
+  transition: all .25s ease-in-out;
+
+  i svg path, i svg circle{
+    transition: fill .25s ease-in-out;
+  }
+
+  &:hover{
+    transform:translateY(-2px);
+    background:white;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+
+    i svg path, i svg circle{
+      fill:black;
+    }
+  }
+}
+
 
 .btn-circle{
-  width:56px;
-  height:56px;
+  width:44px;
+  height:44px;
   background:white;
   border-radius:50%;
   box-shadow:0 6px 10px rgba(0,0,0,0.2);
@@ -126,3 +135,64 @@ i.arrow{
   }
 }
 
+
+
+@mixin buttons--md(){
+  .btn{
+    &--icon{
+      p{
+        margin-top: 0;
+      }
+      i{
+        display:block;
+        position:absolute;
+        margin:5px 0 0 10px;
+        width:20px;
+        height:20px;
+        right:30px;
+        margin-top:3px;
+        opacity: 0;
+        transition: opacity .4s ease-in-out;
+  
+        svg{
+          .cls-1{
+            &:nth-of-type(2){
+              opacity:0;
+              transform: translateX(-30px);
+              transition: all .25s ease-in-out;
+            }
+          }
+        }
+      }
+  
+      &:hover{
+        padding-right:2.75rem;
+  
+        i{
+          opacity:1;
+  
+          svg{
+            .cls-1{
+              &:nth-of-type(2){
+                transform: translateX(0px);
+                opacity:1;
+              } 
+            }
+          }
+        }
+      }
+    }
+  }// .btn
+
+  .btn-circle{
+    width:56px;
+    height:56px;
+  }
+  .btn-icon-circle{
+    width: 50px;
+    height: 50px;
+  }
+  .btn-text-link-box{
+    padding:.4rem .85rem .3rem .85rem;
+  }
+}
